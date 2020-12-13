@@ -44,7 +44,7 @@
 <li> 
   <h4>e) Uso de arquivos como meio de armazenamento dos dados – permitindo a leitura e gravação de objetos em arquivos (facultado o uso de banco de dados relacional)<h4>
     <ul>
-      <li><a href="src/database">Utilização do banco de dados Postgresql para todas as operaçes do item d) (vide arquivo de conexão e execução do jar seguindo os requisitos para rodar o projeto)</a></li>
+      <li><a href="src/Database">Utilização do banco de dados Postgresql para todas as operaçes do item d) (vide arquivo de conexão e execução do jar seguindo os requisitos para rodar o projeto)</a></li>
     </ul>
 </li>
 <li> 
@@ -86,7 +86,7 @@
 <li> 
   <h4>l)  JAR da aplicação<h4>
     <ul>
-      <li><a href="src/exec">Jar no diretório exec</a></li>
+      <li><a href="exec">Jar no diretório exec</a></li>
     </ul>
 </li>
 </ul>
