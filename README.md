@@ -90,3 +90,10 @@
     </ul>
 </li>
 </ul>
+   <h3>Imagens de algumas telas:</h3>
+    <img src="img/tela_principal.png" height="300px"/>    
+    <img src="img/adicionar_pokemon.png" height="300px"/>
+    <img src="img/visualizar_pokemon.png" height="300px"/>
+    <img src="img/visualizar_treinador.png" height="300px"/>
+    <img src="img/visualizar_pokemons_treinador.png" height="300px"/>
+
