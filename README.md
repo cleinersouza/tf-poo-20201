@@ -86,7 +86,7 @@
 <li> 
   <h4>l)  JAR da aplicação<h4>
     <ul>
-      <li><a href="src/exc">Jar no diretório exec</a></li>
+      <li><a href="src/exec">Jar no diretório exec</a></li>
     </ul>
 </li>
 </ul>
