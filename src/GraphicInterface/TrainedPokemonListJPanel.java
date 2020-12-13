@@ -1,13 +1,15 @@
 package GraphicInterface;
 
 import Entities.TrainedPokemon;
+import Entities.Trainer;
+import Interfaces.EntityListJPanelInterface;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class TrainedPokemonListJPanel {
+public class TrainedPokemonListJPanel implements EntityListJPanelInterface {
     private JFrame window;
 
     public TrainedPokemonListJPanel(JFrame window){
@@ -17,7 +19,7 @@ public class TrainedPokemonListJPanel {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(0, 1));
 
-        panel = trainedPokemonNamesButton(panel);
+        panel = namesButton(panel);
 
         JScrollPane jsp = new JScrollPane(panel,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -27,7 +29,7 @@ public class TrainedPokemonListJPanel {
         return jsp;
     }
 
-    public JPanel trainedPokemonNamesButton(JPanel panel){
+    public JPanel namesButton(JPanel panel){
         TrainedPokemon trainedPokemonRead = new TrainedPokemon();
         ArrayList<TrainedPokemon> trainedPokemons = trainedPokemonRead.read();
 
@@ -36,7 +38,8 @@ public class TrainedPokemonListJPanel {
         }
         return panel;
     }
-    public JButton createButton(TrainedPokemon trainedPokemon){
+    public JButton createButton(Object object){
+        TrainedPokemon trainedPokemon= (TrainedPokemon) object;
         JButton newButton = new JButton(trainedPokemon.getName());
         newButton.setForeground(Color.WHITE);
         newButton.setBackground(Color.GRAY);

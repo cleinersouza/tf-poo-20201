@@ -24,8 +24,8 @@ public class CreateDb {
             ");";
     private static String trainer_pokemon ="CREATE TABLE IF NOT EXISTS trainer_pokemon(" +
             "  id SERIAL PRIMARY KEY,"+
-            "  trainer_id int NOT NULL REFERENCES trainer(id)," +
-            "  pokemon_id int NOT NULL REFERENCES trainedpokemon(id)" +
+            "  trainer_id int NOT NULL REFERENCES trainer(id) ON DELETE CASCADE ON UPDATE CASCADE," +
+            "  pokemon_id int NOT NULL REFERENCES trainedpokemon(id) ON DELETE CASCADE ON UPDATE CASCADE" +
             ");";
     public static void CreateDb(){
         DatabaseConnection.executeQuery(pokemon);

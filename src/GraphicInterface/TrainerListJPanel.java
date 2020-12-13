@@ -1,13 +1,14 @@
 package GraphicInterface;
 
 import Entities.Trainer;
+import Interfaces.EntityListJPanelInterface;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class TrainerListJPanel {
+public class TrainerListJPanel implements EntityListJPanelInterface {
     private JFrame window;
 
     public TrainerListJPanel(JFrame window){
@@ -17,7 +18,7 @@ public class TrainerListJPanel {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(0, 1));
 
-        panel = trainerNamesButton(panel);
+        panel = namesButton(panel);
 
         JScrollPane jsp = new JScrollPane(panel,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -27,7 +28,7 @@ public class TrainerListJPanel {
         return jsp;
     }
 
-    public JPanel trainerNamesButton(JPanel panel){
+    public JPanel namesButton(JPanel panel){
         Trainer trainerRead = new Trainer();
         ArrayList<Trainer> trainers = trainerRead.read();
 
@@ -36,7 +37,8 @@ public class TrainerListJPanel {
         }
         return panel;
     }
-    public JButton createButton(Trainer trainer){
+    public JButton createButton(Object object){
+        Trainer trainer = (Trainer) object;
         JButton newButton = new JButton(trainer.getName());
         newButton.setForeground(Color.WHITE);
         newButton.setBackground(Color.GRAY);

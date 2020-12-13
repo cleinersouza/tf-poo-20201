@@ -1,13 +1,15 @@
 package GraphicInterface;
 
 import Entities.Pokemon;
+import Entities.Trainer;
+import Interfaces.EntityListJPanelInterface;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class PokemonListJPanel{
+public class PokemonListJPanel implements EntityListJPanelInterface {
     private JFrame window;
 
     public PokemonListJPanel(JFrame window){
@@ -17,7 +19,7 @@ public class PokemonListJPanel{
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(0, 1));
 
-        panel = pokemonNamesButton(panel);
+        panel = namesButton(panel);
 
         JScrollPane jsp = new JScrollPane(panel,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -27,7 +29,7 @@ public class PokemonListJPanel{
         return jsp;
     }
 
-    public JPanel pokemonNamesButton(JPanel panel){
+    public JPanel namesButton(JPanel panel){
         Pokemon pokemonRead = new Pokemon();
         ArrayList<Pokemon> pokemons = pokemonRead.read();
 
@@ -36,7 +38,8 @@ public class PokemonListJPanel{
         }
         return panel;
     }
-    public JButton createButton(Pokemon pokemon){
+    public JButton createButton(Object object){
+        Pokemon pokemon = (Pokemon) object;
         JButton newButton = new JButton(pokemon.getName());
         newButton.setForeground(Color.WHITE);
         newButton.setBackground(Color.GRAY);
