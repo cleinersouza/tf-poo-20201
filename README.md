@@ -26,13 +26,13 @@
 <li> 
   <h4>b) Diagrama de classes mostrando as classes, atributos e métodos e seus relacionamentos <h4>
   <ul>
-      <li><a href="src/docs">Diagrama de Classes</a></li>
+      <li><a href="docs">Diagrama de Classes</a></li>
     </ul>
 </li>
 <li> 
   <h4>c) Implementação das classes de acordo com o diagrama<h4>
     <ul>
-      <li><a href="src/docs">Vide o diagrama de Classes</a></li>
+      <li><a href="docs">Vide o diagrama de Classes</a></li>
     </ul>
 </li>
 <li> 
@@ -62,7 +62,7 @@
 <li> 
   <h4>h) Controle e tratamento de Exceções<h4>
     <ul>
-      <li><a href="src/">Todos os arquivos que interagem com o banco de dados possuem blocos para tratamento de exceções, além da exceção prórpia do projeto</a></li>
+      <li><a href="src/">Todos os arquivos que interagem com o banco de dados possuem blocos para tratamento de exceções, além da exceção própria do projeto</a></li>
     </ul>
 </li>
 <li> 
