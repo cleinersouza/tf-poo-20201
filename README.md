@@ -2,6 +2,12 @@
     Trabalho final da disciplina de Orientação a Objetos
 </h1>
 
+</br>
+<li>
+<h2> Link para o Vídeo</h2>
+    <h4 href="https://youtu.be/l5kz16Y_2o0">Seminário de Design Patterns - Abstract Factory</h4></li>
+</br>
+
 <h1>
   :clipboard:Requisitos para rodar o projeto:
 </h1>
